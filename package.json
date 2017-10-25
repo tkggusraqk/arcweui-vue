@@ -13,8 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/linmoer/vue-flag-list.git"
+    "url": "git+https://github.com/tkggusraqk/arcweui-vue.git"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "vue",
+    "weui",
+    "arc"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tkggusraqk/arcweui-vue/blob/master/README.md",
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
