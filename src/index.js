@@ -1,3 +1,4 @@
+import '@/assets/css/index.less'
 import 'core-js/fn/array/find'
 import 'core-js/fn/array/find-index'
 

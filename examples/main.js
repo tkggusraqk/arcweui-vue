@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 
 import ArcWeUi from '@/index.js'
-import '@/assets/css/index.less'
 
 Vue.use(ArcWeUi)
 Vue.config.productionTip = false

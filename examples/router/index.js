@@ -13,7 +13,7 @@ for (let index = 0; index < components.length; index++) {
     path: element.path,
     name: element.name,
     component: () =>
-      import ('@/examples/components/' + element.component)
+      import ('../components/' + element.component)
   })
 }
 
