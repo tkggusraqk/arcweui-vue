@@ -7,12 +7,10 @@ weui的vue版本
   
    npm install arcweui-vue --save
    
-   main.js 引入依赖：
-   
-   import ArcWeUI from 'arcweui-vue'
-   
-   import 'arcweui-vue/dist/arcweui-vue.min.css'
-   
-   Vue.use(ArcWeUI)
-   
+   main.js 引入依赖：  
+``` javascript
+import ArcWeUI from 'arcweui-vue'   
+import 'arcweui-vue/dist/arcweui-vue.min.css'   
+Vue.use(ArcWeUI)
+```
    具体使用请到github 下载项目看examples
