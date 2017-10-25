@@ -1,4 +1,5 @@
 'use strict'
+var path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -28,7 +29,7 @@ module.exports = merge(baseWebpackConfig, {
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: path.join(__dirname, '../examples/index.html'),
       inject: true
     }),
     new FriendlyErrorsPlugin()
