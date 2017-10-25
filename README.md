@@ -1,7 +1,8 @@
 # arcweui-vue
 weui的vue版本
 # 说明
-样式依赖weui css，[链接地址](https://github.com/Tencent/weui/wiki/getting-started)   
+样式依赖weui css，[链接地址](https://github.com/Tencent/weui/wiki/getting-started)
+
 #安装/使用
   
    npm install arcweui-vue --save
