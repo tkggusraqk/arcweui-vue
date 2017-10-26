@@ -22,12 +22,15 @@ export default {
 }
 header {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
-  top: 10px;
+  top: 0px;
+  background: white;
+  padding: 10px;
 }
 
 .container {
   margin-top: 40px;
+  z-index: 1;
 }
 </style>

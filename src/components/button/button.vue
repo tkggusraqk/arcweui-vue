@@ -1,6 +1,6 @@
 <template>
-  <a href="javascript:;" @click="clickHandler" class="weui-btn" :class="classNames">
-    <i class="weui-loading" v-show="showLoading"></i>
+  <a href="javascript:;" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
+    <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
     <span v-html="text"></span>
   </a>
 </template>
@@ -8,39 +8,48 @@
 export default {
   props: {
     text: String,
-    typeClass: {
+    type: {
       type: String,
-      default: 'weui-btn_primary'
+      default: 'primary'
     },
     clickDisabled: Boolean,
     clickDisabledLoading: Boolean,
-    value: {
+    clearDisabled: {
       type: Boolean,
-      default: true
+      default: false
+    }
+  },
+  computed: {
+    classNames() {
+      let className
+      if (!this.type.includes('mini_')) {
+        className = 'weui-btn_' + this.type
+      } else {
+        let types = this.type.split('_')
+        className = types.map((item) => { return 'weui-btn_' + item }).toString().replace(/,/g, ' ')
+      }
+      return className
     }
   },
   watch: {
-    value(val) {
-      if (!val) {
-        this.classNames = this.classNames.replace('weui-btn_disabled', '').replace('weui-btn_loading', '')
-        this.showLoading = false
+    clearDisabled(val) {
+      if (val) {
+        this.dynamicClass = ''
       }
     }
   },
   data() {
     return {
-      classNames: this.typeClass,
-      showLoading: false
+      dynamicClass: ''
     }
   },
   methods: {
     clickHandler() {
       if (this.clickDisabled) {
-        this.classNames += ' weui-btn_disabled'
+        this.dynamicClass = 'weui-btn_disabled'
       }
       if (this.clickDisabledLoading) {
-        this.showLoading = true
-        this.classNames += ' weui-btn_disabled weui-btn_loading'
+        this.dynamicClass = 'weui-btn_disabled weui-btn_loading'
       }
       this.$emit('click')
     }

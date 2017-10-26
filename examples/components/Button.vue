@@ -1,27 +1,36 @@
 <template>
   <div>
     <Button text="按钮" @click="clickHandler"></Button>
-    <Button text="按钮" @click="clickHandler" typeClass="weui-btn_warn"></Button>
-    <Button text="按钮" @click="clickHandler" typeClass="customer-width"></Button>
-    <Button text="小按钮" @click="clickHandler" typeClass="weui-btn_mini weui-btn_primary"></Button>
-    <Button text="clickDisabled" :clickDisabled="true" v-model="btnDisabled" @click="clickHandler('disabled')"></Button>
-    <Button text="clickDisabledLoading" :clickDisabledLoading="true" v-model="btnDisabled" @click="clickHandler('disabled,loading')"></Button>
+    <Button text="按钮" @click="clickHandler" type="warn"></Button>
+    <Button text="按钮" @click="clickHandler" type="default" class="customer-width"></Button>
+    <Button text="小按钮" @click="clickHandler" type="mini_primary"></Button>
+    <Button text="clickDisabled" :clickDisabled="true" :clearDisabled="clearDisabled" @click="clickHandler('disabled')"></Button>
+    <Button text="clickDisabledLoading" :clickDisabledLoading="true" :clearDisabled="clearLoading" @click="clickHandler('loading')"></Button>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      btnDisabled: true
+      clearDisabled: false,
+      clearLoading: false
     }
   },
   methods: {
     clickHandler(type) {
+      this.clearDisabled = false
+      this.clearLoading = false
       let msg = '单击了按钮'
-      if (type.includes('disabled')) {
+      if (type && type.includes('disabled')) {
         msg += ',3秒后解除禁用'
         setTimeout(() => {
-          this.btnDisabled = false
+          this.clearDisabled = true
+        }, 3000)
+      }
+      if (type && type.includes('loading')) {
+        msg += ',3秒后解除禁用'
+        setTimeout(() => {
+          this.clearLoading = true
         }, 3000)
       }
       this.$toast.success(msg)
@@ -32,7 +41,6 @@ export default {
 <style lang="less">
 .customer-width {
   width: 200px;
-  color: black;
 }
 </style>
 
