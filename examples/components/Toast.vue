@@ -1,9 +1,9 @@
 <template>
   <div>
-    <a href="javascript:;" @click="toast" class="weui-btn weui-btn_primary">Toast</a>
-    <a href="javascript:;" @click="toastError" class="weui-btn weui-btn_primary">Toast Error</a>
-    <a href="javascript:;" @click="loading" class="weui-btn weui-btn_primary">Loading</a>
-    <a href="javascript:;" @click="repeatToast" class="weui-btn weui-btn_primary">重复Toast</a>
+    <Button text="Toast" @click="toast" typeClass="weui-btn_primary"></Button>
+    <Button text="Toast Error" @click="toastError" typeClass="weui-btn_primary"></Button>
+    <Button text="Loading" @click="loading" typeClass="weui-btn_primary"></Button>
+    <Button text="重复Toast" @click="repeatToast" typeClass="weui-btn_primary"></Button>
   </div>
 </template>
 <script>

@@ -1,10 +1,13 @@
 import '@/assets/css/index.less'
 import 'core-js/fn/array/find'
 import 'core-js/fn/array/find-index'
+import 'core-js/fn/array/includes'
 
 import Toast from './components/toast'
+import Button from './components/button'
+import Tag from './components/tag'
 
-const ArcWeUi = { Toast }
+const ArcWeUi = { Toast, Button, Tag }
 
 const install = function(Vue, config = {}) {
   Object.keys(ArcWeUi).forEach(key => {

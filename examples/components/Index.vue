@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a href="javascript:;" @click="clickHandler('Toast')" class="weui-btn weui-btn_primary">
-      Toast</a>
+    <Button text="Toast" @click="clickHandler('Toast')" typeClass="weui-btn_primary"></Button>
+    <Button text="Button" @click="clickHandler('Button')" typeClass="weui-btn_primary"></Button>
   </div>
 </template>
 <script>
