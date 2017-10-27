@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Ionicons';
+  src:  url('fonts/Ionicons.eot?59md5u');
+  src:  url('fonts/Ionicons.eot?59md5u#iefix') format('embedded-opentype'),
+    url('fonts/Ionicons.ttf?59md5u') format('truetype'),
+    url('fonts/Ionicons.woff?59md5u') format('woff'),
+    url('fonts/Ionicons.svg?59md5u#Ionicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="arc-weui-"], [class*=" arc-weui-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Ionicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.arc-weui-close:before {
+  content: "\f2d7";
+}

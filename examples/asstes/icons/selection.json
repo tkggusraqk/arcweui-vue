@@ -1,0 +1,79 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M596 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+        ],
+        "width": 596,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "ion-android-close"
+        ],
+        "defaultCode": 62167,
+        "grid": 0,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "id": 41,
+        "order": 30,
+        "ligatures": "",
+        "prevSize": 32,
+        "code": 62167,
+        "name": "arcweui-close"
+      },
+      "setIdx": 0,
+      "setId": 4,
+      "iconIdx": 40
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "Ionicons"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "ivu-icon-",
+      "metadata": {
+        "fontFamily": "Ionicons",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 12.5
+      },
+      "embed": false,
+      "postfix": "",
+      "noie8": false,
+      "ie7": false,
+      "includeMetadata": false,
+      "showSelector": true,
+      "showMetrics": false,
+      "showMetadata": false,
+      "showVersion": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "autoHost": true
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16,
+    "quickUsageToken": {
+      "UntitledProject": "MjA5YjQ4ZTNjMzgwZDYzY2U4ZTQxMmFkOTg2M2QzMTkjMSMxNTAwMjc1MDQxIyMj"
+    }
+  }
+}

@@ -6,8 +6,9 @@ import 'core-js/fn/array/includes'
 import Toast from './components/toast'
 import Button from './components/button'
 import Tag from './components/tag'
+import Badge from './components/badge'
 
-const ArcWeUi = { Toast, Button, Tag }
+const ArcWeUi = { Toast, Button, Tag, Badge }
 
 const install = function(Vue, config = {}) {
   Object.keys(ArcWeUi).forEach(key => {

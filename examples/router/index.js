@@ -7,6 +7,7 @@ components.push({ component: 'Index', name: 'Index', path: '/' })
 components.push({ component: 'Toast', name: 'Toast', path: '/Toast' })
 components.push({ component: 'Button', name: 'Button', path: '/Button' })
 components.push({ component: 'Tag', name: 'Tag', path: '/Tag' })
+components.push({ component: 'Badge', name: 'Badge', path: '/Badge' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
