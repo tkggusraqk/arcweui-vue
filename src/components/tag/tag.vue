@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
-    <span class="tag-badge arc-weui-close" @click="closeHandler" v-show="showClose"></span>
     <Button :text="text" v-on:click="clickHandler" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
+       <span name="ext" class="tag-badge arc-weui-close" @click="closeHandler" v-show="showClose"></span>
     </Button>
   </div>
 </template>

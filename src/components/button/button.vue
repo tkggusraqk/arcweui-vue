@@ -2,6 +2,7 @@
   <a href="javascript:;" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
     <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
     <span v-html="text"></span>
+    <slot slot="ext"></slot>
   </a>
 </template>
 <script>

@@ -1,7 +1,6 @@
 @tag-prefix-cls: ~"@{css-prefix}-tag";
 .@{tag-prefix-cls} {
     display: inline-block;
-    position: relative; // text-align: center;
     .tag-button {
         display: inline-block;
         min-width: 83px;
@@ -9,24 +8,25 @@
         background: white;
         border-radius: 3px;
         color: #666666;
+        overflow: visible;
+        text-align: center;
     }
     .tag-badge {
         position: absolute;
         z-index: 2;
         right: -6px;
-        top: -6px;
+        top: -8px;
         background: @error-color;
         color: white;
         width: 16px;
         height: 16px;
         border-radius: 8px;
         line-height: 16px;
-        font-size: 12px;
         text-align: center;
     }
     .arc-weui-close:before {
         position: relative;
-        margin: 0 auto;
+        margin-left: 1.2px;
     }
     .tag-default {
         color: @primary-color;
