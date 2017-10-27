@@ -1,7 +1,7 @@
 @tag-prefix-cls: ~"@{css-prefix}-tag";
 .@{tag-prefix-cls} {
     display: inline-block;
-    position: relative;
+    position: relative; // text-align: center;
     .tag-button {
         display: inline-block;
         min-width: 83px;
@@ -22,9 +22,11 @@
         border-radius: 8px;
         line-height: 16px;
         font-size: 12px;
+        text-align: center;
     }
     .arc-weui-close:before {
-        margin-left: 2px;
+        position: relative;
+        margin: 0 auto;
     }
     .tag-default {
         color: @primary-color;

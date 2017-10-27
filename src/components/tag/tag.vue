@@ -14,7 +14,8 @@ export default {
       type: Boolean,
       default: false
     },
-    isDefault: Boolean
+    isDefault: Boolean,
+    tag: [Object, Number, String]
   },
   data() {
     return {
@@ -24,11 +25,11 @@ export default {
   },
   methods: {
     closeHandler() {
-      this.$emit('close-tag')
+      this.$emit('remove', { tag: this.tag, text: this.text })
     },
     clickHandler() {
       this.activated = !this.activated
-      this.$emit('click', { text: this.text, activated: this.activated })
+      this.$emit('click', { tag: this.tag, text: this.text, activated: this.activated })
     }
   }
 }
