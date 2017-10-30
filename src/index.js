@@ -8,8 +8,10 @@ import Button from './components/button'
 import Tag from './components/tag'
 import Badge from './components/badge'
 import TagPanel from './components/tag-panel'
+import Dialog from './components/dialog'
+import DialogTag from './components/dialog-tag'
 
-const ArcWeUi = { Toast, Button, Tag, Badge, TagPanel }
+const ArcWeUi = { Toast, Button, Tag, Badge, TagPanel, Dialog, DialogTag }
 
 const install = function(Vue, config = {}) {
   Object.keys(ArcWeUi).forEach(key => {

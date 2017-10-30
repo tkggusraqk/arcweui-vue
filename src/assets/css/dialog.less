@@ -1,0 +1,25 @@
+@dialog-prefix-cls: ~"@{css-prefix}-dialog";
+.@{dialog-prefix-cls} {
+    .weui-dialog__hd {
+        padding: 0.5em 1.6em;
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 44px;
+            right: 0;
+            height: 1px;
+            border-bottom: 1px solid #d5d5d6;
+            color: #d5d5d6;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+    }
+    .weui-dialog__bd {
+        padding-top: 10px;
+        height: 100%;
+        overflow-y: auto;
+    }
+}

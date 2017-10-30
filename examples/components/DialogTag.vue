@@ -1,9 +1,11 @@
 <template>
   <div>
-    <TagPanel :tags="tags" v-model="newTag" v-on:remove-tag="removeTag" v-on:add-tag="addTag"></TagPanel>
+    <Button text="设置标签" @click="showDialog"></Button>
+    <DialogTag :tags="tags" v-model="visible"></DialogTag>
   </div>
 </template>
 <script>
+
 export default {
   data() {
     return {
@@ -11,7 +13,8 @@ export default {
         default: [],
         customer: []
       },
-      newTag: ''
+      newTag: '',
+      visible: false
     }
   },
   mounted() {
@@ -25,6 +28,9 @@ export default {
     }
   },
   methods: {
+    showDialog() {
+      this.visible = true
+    },
     removeTag(value) {
       //根据实际业务处理，成功后移除此tag
       this.tags[value.tag.type].splice(value.tag.tag, 1)
@@ -39,3 +45,4 @@ export default {
   }
 }
 </script>
+

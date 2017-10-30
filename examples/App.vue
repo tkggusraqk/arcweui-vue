@@ -22,7 +22,7 @@ export default {
 }
 header {
   position: fixed;
-  z-index: 9999;
+  z-index: 1000;
   width: 100%;
   top: 0px;
   background: white;

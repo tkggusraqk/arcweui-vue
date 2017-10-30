@@ -9,6 +9,8 @@ components.push({ component: 'Button', name: 'Button', path: '/Button' })
 components.push({ component: 'Tag', name: 'Tag', path: '/Tag' })
 components.push({ component: 'Badge', name: 'Badge', path: '/Badge' })
 components.push({ component: 'TagPanel', name: 'TagPanel', path: '/TagPanel' })
+components.push({ component: 'Dialog', name: 'Dialog', path: '/Dialog' })
+components.push({ component: 'DialogTag', name: 'DialogTag', path: '/DialogTag' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
