@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
-    <Dialog title="标签" v-model="showDialog" type="confirm">
-      <TagPanel :tags="tags" v-on:remove="removeTag" v-on:add-tag="addTag" v-model="newTag" v-on:click="clickHandler"></TagPanel>
+    <Dialog title="标签" v-model="showDialog" @click="dialogResult" type="confirm">
+      <TagPanel :tags="tags" v-on:remove-tag="removeTag" v-on:add-tag="addTag" v-model="addTagText" v-on:click-tag="clickHandler"></TagPanel>
     </Dialog>
   </div>
 </template>
@@ -20,18 +20,31 @@ export default {
     value: {
       type: Boolean,
       default: false
+    },
+    newTag: {
+      type: String,
+      default: ''
     }
   },
   watch: {
     value(val) {
       this.showDialog = val
+    },
+    showDialog(val) {
+      this.$emit('input', val)
+    },
+    newTag(val) {
+      this.addTagText = val
+    },
+    addTagText(val) {
+      this.$emit('update:newTag', val)
     }
   },
   data() {
     return {
       prefixCls: 'arc-weui-dialog-tag',
       showDialog: this.value,
-      newTag: ''
+      addTagText: this.newTag
     }
   },
   methods: {
@@ -42,7 +55,10 @@ export default {
       this.$emit('click-tag', value)
     },
     addTag() {
-      this.$emit('add-tag', this.newTag)
+      this.$emit('add-tag', this.addTagText)
+    },
+    dialogResult(value) {
+      this.$emit('dialog-result', value)
     }
   }
 }

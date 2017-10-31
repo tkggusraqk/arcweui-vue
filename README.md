@@ -14,13 +14,20 @@ import 'arcweui-vue/dist/arcweui-vue.min.css'
 Vue.use(ArcWeUI)
 ```
    具体使用请到github 下载项目看examples
-   
+
 #已实现组件
-   
+
    toast
-   
+
    button
-   
+
    badge
-   
+
    tag
+
+   tag-panel
+
+   dialog
+
+   dialog-tag
+

@@ -2,16 +2,16 @@
   <div v-show="visible" :class="prefixCls">
     <div class="weui-mask"></div>
     <div class="weui-dialog">
-      <div class="weui-dialog__hd">
+      <div class="weui-dialog__hd" :id="dlgTitleId">
         <strong class="weui-dialog__title" v-text="title"></strong>
       </div>
-      <div class="weui-dialog__bd" :id="dlgContentId">
+      <div class="weui-dialog__bd" :style="contentHeight>0?'height:'+contentHeight+'px':''" :id="dlgContentId">
         <template v-if="content">
           {{content}}
         </template>
         <slot v-else></slot>
       </div>
-      <div class="weui-dialog__ft">
+      <div class="weui-dialog__ft" :id="dlgFooterId">
         <template v-for="(item,index) in buttons">
           <a href="javascript:;" @click="clickHandler(index)" :key="index" class="weui-dialog__btn" :class="getTypeClass(item,index)">{{getBtnText(item)}}</a>
         </template>
@@ -42,19 +42,33 @@ export default {
   watch: {
     value(val) {
       this.visible = val
+    },
+    visible(val) {
+      if (this.dialogHeight === 0) {
+        //为了解决 调用时在 mounted 生命周期 渲染数据，得不到元素实际高度
+        this.$nextTick(() => {
+          this.checkContentHeight()
+        })
+      }
     }
   },
   data() {
     return {
       visible: this.value,
       prefixCls: 'arc-weui-dialog',
-      dlgContentId: new Date().getTime()
+      dlgContentId: 'content' + new Date().getTime(),
+      dlgTitleId: 'title' + new Date().getTime(),
+      dlgFooterId: 'footer' + new Date().getTime(),
+      contentHeight: 0,
+      dialogHeight: 0
     }
   },
   mounted() {
     let dom = document.getElementById(this.dlgContentId)
     dom.addEventListener('DOMNodeInserted', (e) => {
-      this.checkContentHeight()
+      this.$nextTick(() => {
+        this.checkContentHeight()
+      })
     })
   },
   methods: {
@@ -85,8 +99,13 @@ export default {
       this.$emit('click', index)
     },
     checkContentHeight() {
-      let dom = document.getElementById(this.dlgContentId)
-      console.log('dom-height:' + dom.offsetHeight)
+      let content = document.getElementById(this.dlgContentId)
+      let title = document.getElementById(this.dlgTitleId)
+      let footer = document.getElementById(this.dlgFooterId)
+      this.dialogHeight = content.offsetHeight + title.offsetHeight + footer.offsetHeight
+      if (this.dialogHeight > window.innerHeight) {
+        this.contentHeight = window.innerHeight - (title.offsetHeight + footer.offsetHeight) * 2 - 22
+      }
     }
   }
 }
