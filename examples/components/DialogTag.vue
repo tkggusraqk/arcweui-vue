@@ -18,7 +18,7 @@ export default {
     }
   },
   mounted() {
-    this.getTags()
+    // this.getTags()
   },
   methods: {
     getTags() {
@@ -33,8 +33,8 @@ export default {
       }
     },
     showDialog() {
-      // 这里是异步加载
-      // this.getTags()
+      // 按需加载
+      this.getTags()
       this.visible = true
     },
     removeTag(value) {

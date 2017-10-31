@@ -1,7 +1,13 @@
 # arcweui-vue
 weui的vue版本
 # 说明
-样式依赖weui css，[链接地址](https://github.com/Tencent/weui/wiki/getting-started)
+样式依赖weui css，[weui链接地址](https://github.com/Tencent/weui/wiki/getting-started)
+
+#扫码快速体验
+
+   ![enter image description here](https://tkggusraqk.github.io/arcweuivue-demo/QRCode.png)
+
+   [线上地址](https://tkggusraqk.github.io/arcweuivue-demo/#/)
 
 #安装/使用
 

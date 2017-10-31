@@ -20,11 +20,11 @@ export default {
       if (value.activated) {
         this.selectTags.push(value.text)
       } else {
-        this.selectTags = this.selectTags.filter(item => item != value.text)
+        this.selectTags = this.selectTags.filter(item => item !== value.text)
       }
     },
     removeTag(text) {
-      this.$toast.success("删除tag" + text)
+      this.$toast.success('删除tag' + text)
     }
   }
 }

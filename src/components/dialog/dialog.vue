@@ -63,14 +63,6 @@ export default {
       dialogHeight: 0
     }
   },
-  mounted() {
-    let dom = document.getElementById(this.dlgContentId)
-    dom.addEventListener('DOMNodeInserted', (e) => {
-      this.$nextTick(() => {
-        this.checkContentHeight()
-      })
-    })
-  },
   methods: {
     getTypeClass(btn, index) {
       if (typeof btn === 'string') {
