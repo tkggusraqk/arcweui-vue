@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <header>ARC WX Component Demo</header>
+    <header>
+      <Cell :leftNav="true" :text="title" v-on:go-back="goBack" :rigthNav="false"></Cell>
+    </header>
     <div class="container">
       <router-view></router-view>
     </div>
@@ -9,16 +11,26 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data() {
+    return {
+      title: 'ARC WX Component Demo'
+    }
+  },
+  methods: {
+    goBack() {
+      this.title = 'ARC WX Component Demo'
+      this.$router.back()
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 header {
   position: fixed;
@@ -26,7 +38,13 @@ header {
   width: 100%;
   top: 0px;
   background: white;
-  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #dddee1;
+  .weui-cell__ft.left-nav {
+    &:after {
+      border-color: #26a2ff;
+    }
+  }
 }
 
 .container {

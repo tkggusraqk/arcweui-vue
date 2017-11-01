@@ -11,6 +11,8 @@ components.push({ component: 'Badge', name: 'Badge', path: '/Badge' })
 components.push({ component: 'TagPanel', name: 'TagPanel', path: '/TagPanel' })
 components.push({ component: 'Dialog', name: 'Dialog', path: '/Dialog' })
 components.push({ component: 'DialogTag', name: 'DialogTag', path: '/DialogTag' })
+components.push({ component: 'Lazyload', name: 'Lazyload', path: '/Lazyload' })
+components.push({ component: 'Cell', name: 'Cell', path: '/Cell' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {

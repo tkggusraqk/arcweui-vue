@@ -1,0 +1,22 @@
+@cell-prefix-cls: ~"@{css-prefix}-cell";
+.@{cell-prefix-cls} {
+    .img-lazy {
+        width: 50px;
+        margin-right: 5px;
+        display: block
+    }
+    .left-nav.weui-cell__ft {
+        &::after {
+            transform: rotate(225deg);
+            width: 12px;
+            height: 12px;
+            margin-top: -8px;
+        }
+    }
+    .clear-nav.weui-cell__ft {
+        padding-right: 0px;
+        &::after {
+            display: none;
+        }
+    }
+}

@@ -37,3 +37,13 @@ Vue.use(ArcWeUI)
 
    dialog-tag
 
+   lazyload(vue-lazyload)
+
+   cell
+
+
+## Links
+
+- [Vue](https://github.com/vuejs/vue)
+- [Webpack](https://github.com/webpack/webpack)
+- [vue-lazyload](https://github.com/hilongjw/vue-lazyload)
