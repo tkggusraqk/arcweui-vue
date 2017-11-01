@@ -1,8 +1,4 @@
 import '@/assets/css/index.less'
-import 'core-js/fn/array/find'
-import 'core-js/fn/array/find-index'
-import 'core-js/fn/array/includes'
-
 import Toast from './components/toast'
 import Button from './components/button'
 import Tag from './components/tag'
@@ -12,6 +8,8 @@ import Dialog from './components/dialog'
 import DialogTag from './components/dialog-tag'
 import VueLazyload from './components/lazyload'
 import Cell from './components/cell'
+
+require('core-js')
 
 const ArcWeUi = { Toast, Button, Tag, Badge, TagPanel, Dialog, DialogTag, Cell }
 
