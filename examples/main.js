@@ -4,11 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import ArcWeUi from '@/index.js'
+import ArcWeUI from '@/index.js'
 // import ArcWeUI from 'arcweui-vue'
 // import 'arcweui-vue/dist/arcweui-vue.min.css'
 
-Vue.use(ArcWeUi)
+Vue.use(ArcWeUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
