@@ -159,6 +159,10 @@ monospace;
 @avatar-color: #fff;
 @avatar-border-radius: @border-radius-small;
 //重写weui
+.text-decoration {
+    text-decoration: line-through
+}
+
 .weui-btn_primary {
     background-color: @primary-color;
     &:not(.weui-btn_disabled):active {
@@ -177,7 +181,8 @@ monospace;
 
 .weui-icon-success-no-circle,
 .weui-icon-success,
-.weui-icon-cancel {
+.weui-icon-cancel,
+.weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before {
     color: @primary-color
 }
 

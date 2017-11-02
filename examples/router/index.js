@@ -13,6 +13,10 @@ components.push({ component: 'Dialog', name: 'Dialog', path: '/Dialog' })
 components.push({ component: 'DialogTag', name: 'DialogTag', path: '/DialogTag' })
 components.push({ component: 'Lazyload', name: 'Lazyload', path: '/Lazyload' })
 components.push({ component: 'Cell', name: 'Cell', path: '/Cell' })
+components.push({ component: 'Input', name: 'Input', path: '/Input' })
+components.push({ component: 'CheckBox', name: 'CheckBox', path: '/CheckBox' })
+components.push({ component: 'CheckBoxList', name: 'CheckBoxList', path: '/CheckBoxList' })
+components.push({ component: 'TitleCell', name: 'TitleCell', path: '/TitleCell' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {

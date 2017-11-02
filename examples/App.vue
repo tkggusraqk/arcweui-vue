@@ -17,6 +17,11 @@ export default {
       title: 'ARC WX Component Demo'
     }
   },
+  mounted() {
+    if (location.hash !== '#/') {
+      this.title = location.hash.replace('#/', '')
+    }
+  },
   methods: {
     goBack() {
       this.title = 'ARC WX Component Demo'

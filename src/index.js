@@ -6,12 +6,29 @@ import Badge from './components/badge'
 import TagPanel from './components/tag-panel'
 import Dialog from './components/dialog'
 import DialogTag from './components/dialog-tag'
-import VueLazyload from './components/lazyload'
 import Cell from './components/cell'
+import Input from './components/input'
+import CheckBox from './components/checkbox'
+import CheckBoxList from './components/checkbox-list'
+import TitleCell from './components/title-cell'
+import VueLazyload from './components/lazyload'
 
 require('core-js')
 
-const ArcWeUi = { Toast, Button, Tag, Badge, TagPanel, Dialog, DialogTag, Cell }
+const ArcWeUi = {
+  Toast,
+  Button,
+  Tag,
+  Badge,
+  TagPanel,
+  Dialog,
+  DialogTag,
+  Cell,
+  Input,
+  CheckBox,
+  CheckBoxList,
+  TitleCell
+}
 
 const install = function(Vue, config = {}) {
   Object.keys(ArcWeUi).forEach(key => {

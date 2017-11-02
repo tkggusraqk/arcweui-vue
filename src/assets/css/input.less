@@ -1,0 +1,14 @@
+@input-prefix-cls: ~"@{css-prefix}-input";
+.@{input-prefix-cls} {
+    border: 1px solid #dfdfdf;
+    padding: 7px 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    .weui-cell__ft .weui-icon-clear {
+        font-size: 23px;
+        color: @avatar-bg;
+    }
+}
+.@{input-prefix-cls}.weui-cell:before{
+  border-top: none;
+}

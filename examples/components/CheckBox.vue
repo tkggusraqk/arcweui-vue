@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <Cell text="不带text" :rightNav="false"></Cell>
+    <CheckBox v-model="checked"></CheckBox>
+    <div>
+      CheckBox 状态：{{checked}}
+    </div>
+    <Cell text="带text" :rightNav="false"></Cell>
+    <CheckBox v-model="checked" text="同意此协议"></CheckBox>
+    <Cell text="正方形风格" :rightNav="false"></Cell>
+    <CheckBox v-model="checked" model='2' text="同意此协议"></CheckBox>
+    <Cell text="带删除线" :rightNav="false"></Cell>
+    <CheckBox v-model="checked" model='2' :textDecoration="true" text="同意此协议"></CheckBox>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      checked: false
+    }
+  },
+  watch: {
+    checked(val) {
+      console.log('状态发生变化啦')
+      //to do
+    }
+  }
+}
+</script>
+

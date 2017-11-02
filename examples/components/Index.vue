@@ -9,6 +9,10 @@
     <Button text="DialogTag" @click="clickHandler('DialogTag')"></Button>
     <Button text="Lazyload" @click="clickHandler('Lazyload')"></Button>
     <Button text="Cell" @click="clickHandler('Cell')"></Button>
+    <Button text="Input" @click="clickHandler('Input')"></Button>
+    <Button text="CheckBox" @click="clickHandler('CheckBox')"></Button>
+    <Button text="CheckBoxList" @click="clickHandler('CheckBoxList')"></Button>
+    <Button text="TitleCell" @click="clickHandler('TitleCell')"></Button>
   </div>
 </template>
 <script>

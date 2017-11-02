@@ -41,9 +41,16 @@ Vue.use(ArcWeUI)
 
    cell
 
+   title-cell
+
+checkbox
+
+checkbox-list
+
 
 ## Links
 
 - [Vue](https://github.com/vuejs/vue)
 - [Webpack](https://github.com/webpack/webpack)
 - [vue-lazyload](https://github.com/hilongjw/vue-lazyload)
+-  [i-view](https://github.com/iview/iview)

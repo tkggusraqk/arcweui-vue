@@ -7,7 +7,7 @@
     <div class="weui-cell__bd">
       <p v-html="text"></p>
     </div>
-    <div class="weui-cell__ft" :class="!rigthNav?'clear-nav':''" v-html="label">
+    <div class="weui-cell__ft" :class="!rightNav?'clear-nav':''" v-html="label">
     </div>
   </a>
 </template>
@@ -18,7 +18,7 @@ export default {
     text: String,
     label: String,
     avatar: String,
-    rigthNav: {
+    rightNav: {
       type: Boolean,
       default: true
     },

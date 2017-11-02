@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+  name: 'DialogTag',
   props: {
     tags: {
       typf: Object,

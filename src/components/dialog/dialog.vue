@@ -21,6 +21,7 @@
 </template>
 <script>
 export default {
+  name: 'Dialog',
   props: {
     type: {
       type: String,

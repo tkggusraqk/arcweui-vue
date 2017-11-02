@@ -1,0 +1,29 @@
+@checkbox-prefix-cls: ~"@{css-prefix}-checkbox";
+.@{checkbox-prefix-cls} {
+    .weui-agree__checkbox {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        &::before {
+            font-size: 1em;
+        }
+        &:checked:before {
+            color: @btn-primary-color;
+        }
+    }
+    .model {
+        height: 25px;
+    }
+    .model-checked {
+        border: 1px solid @primary-color;
+        background-color: @primary-color;
+    }
+}
+
+.@{checkbox-prefix-cls}.checkbox-nomal {
+    display: inline-block;
+    padding: 5px;
+    .weui-cell {
+        padding: 0px;
+    }
+}
