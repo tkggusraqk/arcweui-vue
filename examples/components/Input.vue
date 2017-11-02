@@ -27,7 +27,7 @@ export default {
       //todo 根据业务处理完成清除内容
       setTimeout(() => {
         this.inputText = ''
-      }, 2000);
+      }, 2000)
     },
     clear() {
       this.$toast.success('你清除了输入内容')
