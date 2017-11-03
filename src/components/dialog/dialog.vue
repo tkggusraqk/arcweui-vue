@@ -99,6 +99,7 @@ export default {
       if (this.dialogHeight > window.innerHeight) {
         this.contentHeight = window.innerHeight - (title.offsetHeight + footer.offsetHeight) * 2 - 22
       }
+      console.log('contentHeight:' + this.contentHeight)
     }
   }
 }

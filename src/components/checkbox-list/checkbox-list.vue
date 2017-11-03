@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
     <template v-for="(item,index) in datas">
-      <CheckBox :key="index" v-model="item.checked" :textDecoration="item.textDecoration" :model="model" :text="item.text"></CheckBox>
+      <CheckBox :key="index" v-model="item.checked" :textDecoration="item.textDecoration" :model="model" :text="item.text" :is-edit="isEdit" v-on:edit="edit(index)" v-on:del="del(index)"></CheckBox>
     </template>
   </div>
 </template>
@@ -15,7 +15,8 @@ export default {
         return []
       }
     },
-    model: String
+    model: String,
+    isEdit: Boolean
   },
   data() {
     return {
@@ -25,6 +26,12 @@ export default {
   methods: {
     checked() {
       this.$('checked')
+    },
+    edit(index) {
+      this.$emit('edit', index)
+    },
+    del(index) {
+      this.$emit('del', index)
     }
   }
 }

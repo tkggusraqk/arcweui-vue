@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="examples-index">
     <Button text="Toast" @click="clickHandler('Toast')"></Button>
     <Button text="Button" @click="clickHandler('Button')"></Button>
     <Button text="Badge" @click="clickHandler('Badge')"></Button>
@@ -13,6 +13,7 @@
     <Button text="CheckBox" @click="clickHandler('CheckBox')"></Button>
     <Button text="CheckBoxList" @click="clickHandler('CheckBoxList')"></Button>
     <Button text="TitleCell" @click="clickHandler('TitleCell')"></Button>
+    <Button text="Msg" @click="clickHandler('Msg')"></Button>
   </div>
 </template>
 <script>
@@ -28,4 +29,15 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+.examples-index {
+  text-align: center;
+  .weui-btn {
+    width: 40%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+</style>
+
 

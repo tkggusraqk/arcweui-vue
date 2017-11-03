@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <Cell :leftNav="true" :text="title" v-on:go-back="goBack" :rigthNav="false"></Cell>
+      <Cell :leftNav="true" :text="title" v-on:go-back="goBack" :rightNav="false"></Cell>
     </header>
     <div class="container">
       <router-view></router-view>

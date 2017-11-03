@@ -5,8 +5,12 @@
         <input type="checkbox" v-model="checked" :class="[model==='1'?'weui-check':'weui-agree__checkbox',checked?'model-checked':'']" :id="id">
         <i class="weui-icon-checked" v-if="model==='1'"></i>
       </div>
-      <div v-if="text && text.length>0" class="weui-cell__bd">
-        <p v-html="text" :class="{'text-decoration':textDecoration && checked}"></p>
+      <div v-if="text && text.length>0" class="weui-cell__bd" :class="{'text-overflow':textOverflow=='ellipsis'}">
+        <p v-html="text" :class="{'text-decoration':textDecoration && checked,'content':textOverflow=='ellipsis'}"></p>
+      </div>
+      <div class="weui-cell__ft" v-if="isEdit">
+        <i class="clouds-edit-o" @click.prevent.self="edit"></i>
+        <i class="clouds-delete" @click.prevent.self="del"></i>
       </div>
     </label>
   </div>
@@ -24,7 +28,12 @@ export default {
       type: String,
       default: '1'
     },
-    textDecoration: Boolean
+    textDecoration: Boolean,
+    textOverflow: {
+      type: String,
+      default: 'ellipsis'
+    },
+    isEdit: Boolean
   },
   watch: {
     value(val) {
@@ -39,6 +48,14 @@ export default {
       prefixCls: 'arc-weui-checkbox',
       id: new Date().getTime(),
       checked: this.value
+    }
+  },
+  methods: {
+    edit() {
+      this.$emit('edit')
+    },
+    del() {
+      this.$emit('del')
     }
   }
 }

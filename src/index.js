@@ -1,5 +1,6 @@
 import '@/assets/css/index.less'
 import Toast from './components/toast'
+import Msg from './components/msg'
 import Button from './components/button'
 import Tag from './components/tag'
 import Badge from './components/badge'
@@ -17,6 +18,7 @@ require('core-js')
 
 const ArcWeUi = {
   Toast,
+  Msg,
   Button,
   Tag,
   Badge,
@@ -35,6 +37,7 @@ const install = function(Vue, config = {}) {
     Vue.component(key, ArcWeUi[key])
   })
   Vue.prototype.$toast = Toast
+  Vue.prototype.$msg = Msg
   Vue.use(VueLazyload, Object.assign({
     loading: require('./assets/loading-spin.svg'),
     error: require('./assets/loading-error.png'),

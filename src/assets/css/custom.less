@@ -158,9 +158,42 @@ monospace;
 @avatar-bg: #ccc;
 @avatar-color: #fff;
 @avatar-border-radius: @border-radius-small;
-//重写weui
+//全局样式
+.text-overflow {
+    overflow: hidden;
+    .content {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 .text-decoration {
     text-decoration: line-through
+}
+
+[class^="clouds-"],
+[class*=" clouds-"] {
+    margin-left: 10px;
+}
+
+//重写weui
+.weui-toptips_success {
+    background: @primary-color;
+}
+
+.weui-icon-success,
+.weui-icon-warn {
+    &::before {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+}
+
+.weui-toptips_success,
+.weui-toptips_warn {
+    display: block;
 }
 
 .weui-btn_primary {

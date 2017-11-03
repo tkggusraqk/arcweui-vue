@@ -4,10 +4,10 @@
       <span v-if="leftNav" class="weui-cell__ft left-nav" @click.stop="goBack"></span>
       <img v-else v-lazy="avatar" class="img-lazy" alt="">
     </div>
-    <div class="weui-cell__bd">
-      <p v-html="text"></p>
+    <div class="weui-cell__bd text-overflow">
+      <p v-html="text" class="content"></p>
     </div>
-    <div class="weui-cell__ft" :class="!rightNav?'clear-nav':''" v-html="label">
+    <div class="weui-cell__ft" v-if="rightNav" :class="!rightNav?'clear-nav':''" v-html="label">
     </div>
   </a>
 </template>

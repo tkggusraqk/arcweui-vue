@@ -43,9 +43,13 @@ Vue.use(ArcWeUI)
 
    title-cell
 
-checkbox
+   checkbox
 
-checkbox-list
+   checkbox-list
+
+   input
+
+   msg
 
 
 ## Links
