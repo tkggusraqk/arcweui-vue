@@ -18,6 +18,7 @@ components.push({ component: 'CheckBox', name: 'CheckBox', path: '/CheckBox' })
 components.push({ component: 'CheckBoxList', name: 'CheckBoxList', path: '/CheckBoxList' })
 components.push({ component: 'TitleCell', name: 'TitleCell', path: '/TitleCell' })
 components.push({ component: 'Msg', name: 'Msg', path: '/Msg' })
+components.push({ component: 'ListRow', name: 'ListRow', path: '/ListRow' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {

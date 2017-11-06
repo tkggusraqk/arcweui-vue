@@ -33,7 +33,11 @@ export default {
       type: String,
       default: 'ellipsis'
     },
-    isEdit: Boolean
+    isEdit: Boolean,
+    enabled: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
     value(val) {
@@ -48,6 +52,11 @@ export default {
       prefixCls: 'arc-weui-checkbox',
       id: new Date().getTime(),
       checked: this.value
+    }
+  },
+  mounted() {
+    if (!this.enabled) {
+      document.getElementById(this.id).disabled = true
     }
   },
   methods: {

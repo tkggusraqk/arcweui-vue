@@ -14,6 +14,7 @@
     <Button text="CheckBoxList" @click="clickHandler('CheckBoxList')"></Button>
     <Button text="TitleCell" @click="clickHandler('TitleCell')"></Button>
     <Button text="Msg" @click="clickHandler('Msg')"></Button>
+    <Button text="ListRow" @click="clickHandler('ListRow')"></Button>
   </div>
 </template>
 <script>

@@ -1,10 +1,18 @@
 @title-cell-prefix-cls: ~"@{css-prefix}-title-cell";
-.@{title-cell-prefix-cls} {
-    padding: 10px;
+.@{title-cell-prefix-cls} {}
+
+.@{title-cell-prefix-cls}.weui-cells {
+    margin-top: 0px;
 }
 
 .@{title-cell-prefix-cls}.clear-top.weui-cells {
     &:before {
         border-top: none;
+    }
+}
+
+.@{title-cell-prefix-cls}.clear-bottom.weui-cells {
+    &::after {
+        border-bottom: none;
     }
 }

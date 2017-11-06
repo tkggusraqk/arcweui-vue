@@ -1,4 +1,5 @@
 import '@/assets/css/index.less'
+import '@/assets/js/utils'
 import Toast from './components/toast'
 import Msg from './components/msg'
 import Button from './components/button'
@@ -12,6 +13,7 @@ import Input from './components/input'
 import CheckBox from './components/checkbox'
 import CheckBoxList from './components/checkbox-list'
 import TitleCell from './components/title-cell'
+import ListRow from './components/list-row'
 import VueLazyload from './components/lazyload'
 
 require('core-js')
@@ -29,7 +31,8 @@ const ArcWeUi = {
   Input,
   CheckBox,
   CheckBoxList,
-  TitleCell
+  TitleCell,
+  ListRow
 }
 
 const install = function(Vue, config = {}) {
