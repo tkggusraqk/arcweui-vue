@@ -23,7 +23,7 @@ export default {
       checked: false,
       checked0: false,
       checked1: false,
-      checked2: false,
+      checked2: false
     }
   },
   watch: {

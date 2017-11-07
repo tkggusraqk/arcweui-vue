@@ -15,6 +15,10 @@
     <Button text="TitleCell" @click="clickHandler('TitleCell')"></Button>
     <Button text="Msg" @click="clickHandler('Msg')"></Button>
     <Button text="ListRow" @click="clickHandler('ListRow')"></Button>
+    <Button text="Dropdown" @click="clickHandler('Dropdown')"></Button>
+    <Button text="Flex" @click="clickHandler('Flex')"></Button>
+    <Button text="Footer" @click="clickHandler('Footer')"></Button>
+    <Button text="Grid" @click="clickHandler('Grid')"></Button>
   </div>
 </template>
 <script>

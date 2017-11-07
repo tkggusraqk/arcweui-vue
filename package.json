@@ -1,6 +1,6 @@
 {
   "name": "arcweui-vue",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "weui的vue封装",
   "author": "jing cheng <xinjingcheng@outlook.com>",
   "private": false,
@@ -29,6 +29,7 @@
   "dependencies": {
     "vue": "^2.5.2",
     "vue-lazyload": "^1.1.4",
+    "vue-multiselect": "^2.0.6",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

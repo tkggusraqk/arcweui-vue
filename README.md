@@ -53,6 +53,14 @@ Vue.use(ArcWeUI)
 
    list-row(单行数据列表)
 
+   flex
+
+   grid
+
+   footer
+
+   dropdown
+
 
 ## Links
 
@@ -60,3 +68,4 @@ Vue.use(ArcWeUI)
 - [Webpack](https://github.com/webpack/webpack)
 - [vue-lazyload](https://github.com/hilongjw/vue-lazyload)
 - [i-view](https://github.com/iview/iview)
+- [vue-multiselect](https://github.com/monterail/vue-multiselect)

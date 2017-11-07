@@ -19,6 +19,10 @@ components.push({ component: 'CheckBoxList', name: 'CheckBoxList', path: '/Check
 components.push({ component: 'TitleCell', name: 'TitleCell', path: '/TitleCell' })
 components.push({ component: 'Msg', name: 'Msg', path: '/Msg' })
 components.push({ component: 'ListRow', name: 'ListRow', path: '/ListRow' })
+components.push({ component: 'Dropdown', name: 'Dropdown', path: '/Dropdown' })
+components.push({ component: 'Flex', name: 'Flex', path: '/Flex' })
+components.push({ component: 'Footer', name: 'Footer', path: '/Footer' })
+components.push({ component: 'Grid', name: 'Grid', path: '/Grid' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {

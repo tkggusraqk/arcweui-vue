@@ -14,7 +14,12 @@ import CheckBox from './components/checkbox'
 import CheckBoxList from './components/checkbox-list'
 import TitleCell from './components/title-cell'
 import ListRow from './components/list-row'
+import Flex from './components/flex'
+import FlexItem from './components/flex-item'
+import Footer from './components/footer'
+import Grid from './components/grid'
 import VueLazyload from './components/lazyload'
+import Multiselect from './components/dropdown'
 
 require('core-js')
 
@@ -32,7 +37,12 @@ const ArcWeUi = {
   CheckBox,
   CheckBoxList,
   TitleCell,
-  ListRow
+  ListRow,
+  Multiselect,
+  Flex,
+  FlexItem,
+  Footer,
+  Grid
 }
 
 const install = function(Vue, config = {}) {
