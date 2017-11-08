@@ -1,0 +1,21 @@
+@tabbar-prefix-cls: ~"@{css-prefix}-tabbar";
+.@{tabbar-prefix-cls} {
+    [class^="clouds-"],
+    [class*=" clouds-"] {
+        margin-left: 0px;
+    }
+    .badge-panel {
+        display: inline-block;
+        position: relative;
+        .badge-value {
+            position: absolute;
+            top: -2px;
+            right: -13px;
+        }
+        .badge-dot {
+            position: absolute;
+            top: 0;
+            right: -6px;
+        }
+    }
+}

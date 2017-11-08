@@ -1,9 +1,9 @@
 <template>
   <div class="weui-grids">
     <a href="javascript:;" class="weui-grid" v-for="(item,index) in datas" :key="index" @click="clickHandler(index)">
-      <div class="weui-grid__icon">
+      <div class="weui-grid__icon" v-if="item.img || item.iconClass">
         <img v-if="item.img" v-lazy="item.img" alt="">
-        <i :class="item.iconClass"></i>
+        <i v-if="item.iconClass" :class="item.iconClass"></i>
       </div>
       <p class="weui-grid__label" v-html="item.title">
       </p>

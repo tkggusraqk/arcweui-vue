@@ -19,6 +19,9 @@
     <Button text="Flex" @click="clickHandler('Flex')"></Button>
     <Button text="Footer" @click="clickHandler('Footer')"></Button>
     <Button text="Grid" @click="clickHandler('Grid')"></Button>
+    <Button text="Loadmore" @click="clickHandler('Loadmore')"></Button>
+    <Button text="Navbar" @click="clickHandler('Navbar')"></Button>
+    <Button text="Tabbar" @click="clickHandler('Tabbar')"></Button>
   </div>
 </template>
 <script>

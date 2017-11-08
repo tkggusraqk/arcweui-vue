@@ -61,6 +61,12 @@ Vue.use(ArcWeUI)
 
    dropdown
 
+   Loadmore
+
+   Navbar
+
+   Tabbar
+
 
 ## Links
 

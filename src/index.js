@@ -18,6 +18,9 @@ import Flex from './components/flex'
 import FlexItem from './components/flex-item'
 import Footer from './components/footer'
 import Grid from './components/grid'
+import Loadmore from './components/loadmore'
+import Navbar from './components/navbar'
+import Tabbar from './components/tabbar'
 import VueLazyload from './components/lazyload'
 import Multiselect from './components/dropdown'
 
@@ -42,7 +45,10 @@ const ArcWeUi = {
   Flex,
   FlexItem,
   Footer,
-  Grid
+  Grid,
+  Loadmore,
+  Navbar,
+  Tabbar
 }
 
 const install = function(Vue, config = {}) {

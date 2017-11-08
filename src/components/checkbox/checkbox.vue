@@ -9,7 +9,7 @@
         <p v-html="text" :class="{'text-decoration':textDecoration && checked,'content':textOverflow=='ellipsis'}"></p>
       </div>
       <div class="weui-cell__ft" v-if="isEdit">
-        <i class="clouds-edit-o" @click.prevent.self="edit"></i>
+        <i class="clouds-add-remark" @click.prevent.self="edit"></i>
         <i class="clouds-delete" @click.prevent.self="del"></i>
       </div>
     </label>

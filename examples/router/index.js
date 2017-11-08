@@ -23,6 +23,9 @@ components.push({ component: 'Dropdown', name: 'Dropdown', path: '/Dropdown' })
 components.push({ component: 'Flex', name: 'Flex', path: '/Flex' })
 components.push({ component: 'Footer', name: 'Footer', path: '/Footer' })
 components.push({ component: 'Grid', name: 'Grid', path: '/Grid' })
+components.push({ component: 'Loadmore', name: 'Loadmore', path: '/Loadmore' })
+components.push({ component: 'Navbar', name: 'Navbar', path: '/Navbar' })
+components.push({ component: 'Tabbar', name: 'Tabbar', path: '/Tabbar' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {
