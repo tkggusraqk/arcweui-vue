@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
     <Button :text="text" v-on:click="clickHandler" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
-       <span name="ext" class="tag-badge weui-icon-clear" @click.stop="closeHandler" v-show="showClose"></span>
+      <span class="tag-badge weui-icon-clear" @click.stop="closeHandler" v-if="showClose"></span>
     </Button>
   </div>
 </template>
