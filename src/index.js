@@ -21,6 +21,7 @@ import Grid from './components/grid'
 import Loadmore from './components/loadmore'
 import Navbar from './components/navbar'
 import Tabbar from './components/tabbar'
+import Search from './components/search'
 import VueLazyload from './components/lazyload'
 import Multiselect from './components/dropdown'
 
@@ -48,7 +49,8 @@ const ArcWeUi = {
   Grid,
   Loadmore,
   Navbar,
-  Tabbar
+  Tabbar,
+  Search
 }
 
 const install = function(Vue, config = {}) {

@@ -67,6 +67,8 @@ Vue.use(ArcWeUI)
 
    Tabbar
 
+   Search
+
 
 ## Links
 
