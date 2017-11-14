@@ -27,6 +27,7 @@ components.push({ component: 'Loadmore', name: 'Loadmore', path: '/Loadmore' })
 components.push({ component: 'Navbar', name: 'Navbar', path: '/Navbar' })
 components.push({ component: 'Tabbar', name: 'Tabbar', path: '/Tabbar' })
 components.push({ component: 'Search', name: 'Search', path: '/Search' })
+components.push({ component: 'Calendar', name: 'Calendar', path: '/Calendar' })
 
 let routerObj = []
 for (let index = 0; index < components.length; index++) {

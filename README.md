@@ -69,6 +69,8 @@ Vue.use(ArcWeUI)
 
    Search
 
+   Calendar(vue-event-calendar-ext)
+
 
 ## Links
 
@@ -77,3 +79,4 @@ Vue.use(ArcWeUI)
 - [vue-lazyload](https://github.com/hilongjw/vue-lazyload)
 - [i-view](https://github.com/iview/iview)
 - [vue-multiselect](https://github.com/monterail/vue-multiselect)
+- [vue-event-calendar-ext](https://github.com/tkggusraqk/vue-event-calendar)

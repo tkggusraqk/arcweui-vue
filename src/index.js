@@ -22,6 +22,7 @@ import Loadmore from './components/loadmore'
 import Navbar from './components/navbar'
 import Tabbar from './components/tabbar'
 import Search from './components/search'
+import Calendar from './components/calendar'
 import VueLazyload from './components/lazyload'
 import Multiselect from './components/dropdown'
 
@@ -64,6 +65,7 @@ const install = function(Vue, config = {}) {
     error: require('./assets/loading-error.png'),
     attempt: 3
   }, config.lazyload))
+  Vue.use(Calendar, {locale: 'zh'})
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

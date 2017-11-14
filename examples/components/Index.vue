@@ -23,6 +23,7 @@
     <Button text="Navbar" @click="clickHandler('Navbar')"></Button>
     <Button text="Tabbar" @click="clickHandler('Tabbar')"></Button>
     <Button text="Search" @click="clickHandler('Search')"></Button>
+    <Button text="Calendar" @click="clickHandler('Calendar')"></Button>
   </div>
 </template>
 <script>
