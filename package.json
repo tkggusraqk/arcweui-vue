@@ -1,6 +1,6 @@
 {
   "name": "arcweui-vue",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "weui的vue封装",
   "author": "jing cheng <xinjingcheng@outlook.com>",
   "private": false,
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/tkggusraqk/arcweui-vue/blob/master/README.md",
   "dependencies": {
     "vue": "^2.5.3",
+    "vue-directive-touch": "^1.0.9",
     "vue-event-calendar-ext": "^1.0.6",
     "vue-lazyload": "^1.1.4",
     "vue-multiselect": "^2.0.6",

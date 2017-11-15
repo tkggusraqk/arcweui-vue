@@ -1,7 +1,7 @@
 <template>
   <div class="arc-weui-tag-example">
-    <Tag text="职业发展" @click="tagClick"></Tag>
-    <Tag text="娱乐休闲" @click="tagClick" :isDefault="true"></Tag>
+    <Tag text="职业发展" @click="tagClick" v-on:longtap="longtap" v-on:remove="removeTag"></Tag>
+    <Tag text="娱乐休闲" @click="tagClick" :isDefault="true" v-on:remove="removeTag"></Tag>
     <Tag text="学习成长" @click="tagClick" :showClose="true" v-on:remove="removeTag"></Tag>
     <br/>
     <br/>
@@ -25,6 +25,9 @@ export default {
     },
     removeTag(text) {
       this.$toast.success('删除tag' + text)
+    },
+    longtap() {
+      console.log('....')
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <a href="javascript:;" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
+  <a href="javascript:;" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
     <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
     <span v-html="text"></span>
     <slot></slot>
@@ -54,6 +54,9 @@ export default {
         this.dynamicClass = 'weui-btn_disabled weui-btn_loading'
       }
       this.$emit('click')
+    },
+    longtap() {
+      this.$emit('longtap')
     }
   }
 }

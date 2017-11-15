@@ -25,6 +25,7 @@ import Search from './components/search'
 import Calendar from './components/calendar'
 import VueLazyload from './components/lazyload'
 import Multiselect from './components/dropdown'
+import VueTouch from 'vue-directive-touch'
 
 require('core-js')
 
@@ -65,7 +66,8 @@ const install = function(Vue, config = {}) {
     error: require('./assets/loading-error.png'),
     attempt: 3
   }, config.lazyload))
-  Vue.use(Calendar, {locale: 'zh'})
+  Vue.use(Calendar, { locale: 'zh' })
+  Vue.use(VueTouch)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

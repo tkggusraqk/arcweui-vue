@@ -29,7 +29,7 @@ Vue.use(ArcWeUI)
 
    badge
 
-   tag
+   tag(longtap)
 
    tag-panel
 
@@ -80,3 +80,4 @@ Vue.use(ArcWeUI)
 - [i-view](https://github.com/iview/iview)
 - [vue-multiselect](https://github.com/monterail/vue-multiselect)
 - [vue-event-calendar-ext](https://github.com/tkggusraqk/vue-event-calendar)
+- [vue-directive-touch](https://github.com/BensonDu/vue-directive-touch)
