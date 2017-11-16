@@ -1,7 +1,7 @@
 <template>
   <div class="weui-toptips js_tooltips" :class="[prefixCls,iconClass]">
     <i :class="typeClass" v-if="message.type"></i>
-    <span v-text="message.msg"></span>
+    <span v-html="message.msg"></span>
   </div>
 </template>
 <script>

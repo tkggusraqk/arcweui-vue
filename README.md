@@ -71,6 +71,10 @@ Vue.use(ArcWeUI)
 
    Calendar(vue-event-calendar-ext)
 
+   Picker
+
+   TimerPicker
+
 
 ## Links
 
@@ -81,3 +85,4 @@ Vue.use(ArcWeUI)
 - [vue-multiselect](https://github.com/monterail/vue-multiselect)
 - [vue-event-calendar-ext](https://github.com/tkggusraqk/vue-event-calendar)
 - [vue-directive-touch](https://github.com/BensonDu/vue-directive-touch)
+- [cube-ui](https://github.com/didi/cube-ui)

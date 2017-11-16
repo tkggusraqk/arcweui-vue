@@ -1,5 +1,10 @@
 import '@/assets/css/index.less'
 import '@/assets/js/utils'
+import {
+  Style,
+  Picker,
+  TimePicker
+} from 'cube-ui'
 import Toast from './components/toast'
 import Msg from './components/msg'
 import Button from './components/button'
@@ -68,6 +73,9 @@ const install = function(Vue, config = {}) {
   }, config.lazyload))
   Vue.use(Calendar, { locale: 'zh' })
   Vue.use(VueTouch)
+  Vue.use(Picker)
+  Vue.use(TimePicker)
+  Vue.use(Style)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

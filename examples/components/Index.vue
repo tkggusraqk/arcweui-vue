@@ -24,6 +24,8 @@
     <Button text="Tabbar" @click="clickHandler('Tabbar')"></Button>
     <Button text="Search" @click="clickHandler('Search')"></Button>
     <Button text="Calendar" @click="clickHandler('Calendar')"></Button>
+    <Button text="Picker" @click="clickHandler('Picker')"></Button>
+    <Button text="TimerPicker" @click="clickHandler('TimerPicker')"></Button>
   </div>
 </template>
 <script>
