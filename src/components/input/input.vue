@@ -2,7 +2,7 @@
   <div class="weui-cell weui-check__label" :class="prefixCls">
     <template v-if="!multiline">
       <div class="weui-cell__bd">
-        <input class="weui-input" :maxlength="maxLength" v-model="text" type="text" @keyup.13="enter" :placeholder="placeholder" />
+        <input class="weui-input" :maxlength="maxLength" @blur="lostFocus" v-model="text" type="text" @keyup.13="enter" :placeholder="placeholder" />
       </div>
       <div class="weui-cell__ft">
         <i class="weui-icon-success" @click="enter" v-show="inSubmit && text.length>0"></i>
@@ -11,7 +11,7 @@
     </template>
     <template v-else>
       <div class="weui-cell__bd">
-        <textarea class="weui-textarea" :placeholder="placeholder" :maxlength="maxLength" v-model="text" :rows="multiline" @keyup.13="enter"></textarea>
+        <textarea class="weui-textarea" :placeholder="placeholder" @blur="lostFocus" :maxlength="maxLength" v-model="text" :rows="multiline" @keyup.13="enter"></textarea>
         <div class="weui-textarea-counter">
           <span class="weui-cell__ft">
             <i class="weui-icon-success" @click="enter" v-show="inSubmit && text.length>0"></i>
@@ -74,6 +74,9 @@ export default {
         this.$emit('input', this.text)
         this.$emit('clear')
       }
+    },
+    lostFocus() {
+      this.$emit('lost-focus')
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="examples-input">
     <Cell text="默认文本框" :rightNav="false"></Cell>
-    <Input v-model="inputText" v-on:enter="enter" v-on:clear="clear"></Input>
+    <Input v-model="inputText" v-on:enter="enter" v-on:clear="clear" v-on:lost-focus="lostFocus"></Input>
     <Cell text="行内提交" :rightNav="false"></Cell>
     <Input v-model="inputText" :inSubmit="true" v-on:enter="enter" v-on:clear="clear"></Input>
     <Cell text="多行文本框" :rightNav="false"></Cell>
@@ -31,6 +31,9 @@ export default {
     },
     clear() {
       this.$toast.success('你清除了输入内容')
+    },
+    lostFocus() {
+      this.$msg.info('第1个文本框失去焦点了')
     }
   }
 }
