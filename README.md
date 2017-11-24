@@ -86,3 +86,10 @@ Vue.use(ArcWeUI)
 - [vue-event-calendar-ext](https://github.com/tkggusraqk/vue-event-calendar)
 - [vue-directive-touch](https://github.com/BensonDu/vue-directive-touch)
 - [cube-ui](https://github.com/didi/cube-ui)
+
+## 更新内容
+
+###1.0.21
+- 添加长按删除控制选项
+- 修复默认选中tag无效bug
+- 修复长按显示浏览器快捷菜单问题

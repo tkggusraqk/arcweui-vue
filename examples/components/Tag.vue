@@ -5,6 +5,10 @@
     <Tag text="学习成长" @click="tagClick" :showClose="true" v-on:remove="removeTag"></Tag>
     <br/>
     <br/>
+    <Tag text="默认选中" @click="tagClick" :selected="true" v-on:remove="removeTag"></Tag>
+    <Tag text="长按显示删除" @click="tagClick" :enabledLongtap="true" v-on:remove="removeTag"></Tag>
+    <br/>
+    <br/>
     <div v-text="selectTags.toString()"></div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <a href="javascript:;" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
+  <a href="javascript:;" :id="id" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
     <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
     <span v-html="text"></span>
     <slot></slot>
@@ -17,6 +17,10 @@ export default {
     clickDisabled: Boolean,
     clickDisabledLoading: Boolean,
     clearDisabled: {
+      type: Boolean,
+      default: false
+    },
+    enabledLongtap: {
       type: Boolean,
       default: false
     }
@@ -42,8 +46,17 @@ export default {
   },
   data() {
     return {
-      dynamicClass: ''
+      dynamicClass: '',
+      id: new Date().getTime()
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      let node = document.getElementById(this.id)
+      node.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      })
+    })
   },
   methods: {
     clickHandler() {
@@ -56,7 +69,9 @@ export default {
       this.$emit('click')
     },
     longtap() {
-      this.$emit('longtap')
+      if (this.enabledLongtap) {
+        this.$emit('longtap')
+      }
     }
   }
 }

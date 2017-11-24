@@ -1,6 +1,6 @@
 <template>
   <div :class="prefixCls">
-    <Button :text="text" v-on:longtap="longtap" v-on:click="clickHandler" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
+    <Button :text="text" v-on:longtap="longtap" v-on:click="clickHandler" :enabledLongtap="enabledLongtap" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
       <span class="tag-badge weui-icon-clear" @click.stop="closeHandler" v-if="enabledClose"></span>
     </Button>
   </div>
@@ -15,17 +15,28 @@ export default {
       default: false
     },
     isDefault: Boolean,
-    tag: [Object, Number, String]
+    tag: [Object, Number, String],
+    enabledLongtap: {
+      type: Boolean,
+      default: false
+    },
+    selected: {
+      type: Boolean,
+      default: false
+    }
   },
   watch: {
     showClose(val) {
       this.enabledClose = val
+    },
+    selected(val) {
+      this.activated = val
     }
   },
   data() {
     return {
       prefixCls: 'arc-weui-tag',
-      activated: false,
+      activated: this.selected,
       enabledClose: this.showClose
     }
   },
