@@ -83,4 +83,3 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default Object.assign(ArcWeUi, { install })
- 

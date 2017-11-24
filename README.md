@@ -88,7 +88,8 @@ Vue.use(ArcWeUI)
 - [cube-ui](https://github.com/didi/cube-ui)
 
 ## 更新内容
-
+###1.0.22
+- input组件添加属性enterSubmit（默认回车提交）
 ###1.0.21
 - 添加长按删除控制选项
 - 修复默认选中tag无效bug

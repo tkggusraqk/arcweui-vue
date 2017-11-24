@@ -1,5 +1,7 @@
 <template>
   <div class="examples-input">
+    <Cell text="回车不提交" :rightNav="false"></Cell>
+    <Input v-model="inputText" v-on:enter="enter" :enterSubmit="false" :inSubmit="true" v-on:clear="clear"></Input>
     <Cell text="默认文本框" :rightNav="false"></Cell>
     <Input v-model="inputText" v-on:enter="enter" v-on:clear="clear" v-on:lost-focus="lostFocus"></Input>
     <Cell text="行内提交" :rightNav="false"></Cell>

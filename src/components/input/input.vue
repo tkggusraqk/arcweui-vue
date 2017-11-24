@@ -5,7 +5,7 @@
         <input class="weui-input" :maxlength="maxLength" @blur="lostFocus" v-model="text" type="text" @keyup.13="enter" :placeholder="placeholder" />
       </div>
       <div class="weui-cell__ft">
-        <i class="weui-icon-success" @click="enter" v-show="inSubmit && text.length>0"></i>
+        <i class="weui-icon-success" @click="submitInput" v-show="inSubmit && text.length>0"></i>
         <i class="weui-icon-clear" @click="clearText"></i>
       </div>
     </template>
@@ -14,7 +14,7 @@
         <textarea class="weui-textarea" :placeholder="placeholder" @blur="lostFocus" :maxlength="maxLength" v-model="text" :rows="multiline" @keyup.13="enter"></textarea>
         <div class="weui-textarea-counter">
           <span class="weui-cell__ft">
-            <i class="weui-icon-success" @click="enter" v-show="inSubmit && text.length>0"></i>
+            <i class="weui-icon-success" @click="submitInput" v-show="inSubmit && text.length>0"></i>
             <i class="weui-icon-clear" @click="clearText"></i>
           </span>
           <span v-if="inputTotal">
@@ -46,7 +46,11 @@ export default {
       type: String,
       default: '请输入内容'
     },
-    value: String
+    value: String,
+    enterSubmit: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
     value(val) {
@@ -65,6 +69,11 @@ export default {
   },
   methods: {
     enter() {
+      if (this.enterSubmit) {
+        this.submitInput()
+      }
+    },
+    submitInput() {
       this.$emit('input', this.text)
       this.$emit('enter')
     },
