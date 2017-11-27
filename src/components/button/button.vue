@@ -1,7 +1,9 @@
 <template>
-  <a href="javascript:;" :id="id" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[classNames,dynamicClass]">
+  <a href="javascript:;" :id="id" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[prefixCls,classNames,dynamicClass]">
     <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
-    <span v-html="text"></span>
+    <span>
+      <p :class="{'text-overflow':maxLength>0 && text.length>maxLength}" v-html="text"></p>
+    </span>
     <slot></slot>
   </a>
 </template>
@@ -23,6 +25,10 @@ export default {
     enabledLongtap: {
       type: Boolean,
       default: false
+    },
+    maxLength: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
@@ -47,7 +53,8 @@ export default {
   data() {
     return {
       dynamicClass: '',
-      id: new Date().getTime()
+      id: new Date().getTime(),
+      prefixCls: 'arc-weui-button'
     }
   },
   mounted() {

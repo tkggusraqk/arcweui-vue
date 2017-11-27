@@ -1,6 +1,6 @@
 <template>
   <div :class="prefixCls">
-    <Button :text="text" v-on:longtap="longtap" v-on:click="clickHandler" :enabledLongtap="enabledLongtap" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
+    <Button :text="text" v-on:longtap="longtap" :maxLength="maxLength" v-on:click="clickHandler" :enabledLongtap="enabledLongtap" type="default" class="tag-button" :class="{'tag-activated':activated,'tag-default':isDefault}">
       <span class="tag-badge weui-icon-clear" @click.stop="closeHandler" v-if="enabledClose"></span>
     </Button>
   </div>
@@ -23,6 +23,10 @@ export default {
     selected: {
       type: Boolean,
       default: false
+    },
+    maxLength: {
+      type: Number,
+      default: 10
     }
   },
   watch: {

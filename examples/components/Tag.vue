@@ -9,6 +9,9 @@
     <Tag text="长按显示删除" @click="tagClick" :enabledLongtap="true" v-on:remove="removeTag"></Tag>
     <br/>
     <br/>
+    <Tag text="长按显示删除超出10个汉字" @click="tagClick" :enabledLongtap="true" v-on:remove="removeTag"></Tag>
+    <br/>
+    <br/>
     <div v-text="selectTags.toString()"></div>
   </div>
 </template>
