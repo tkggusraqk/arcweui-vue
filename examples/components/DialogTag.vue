@@ -25,11 +25,11 @@ export default {
       //这里是模拟数据，实际业务应该去服务器请求数据
       let length = Math.round(Math.random() * 30) + 5
       for (let index = 0; index < length; index++) {
-        this.tags.default.push({ text: '生活娱乐' + index, selected: false, showClose: false, isDefault: true })
+        this.tags.default.push({ text: '生活娱乐' + index, selected: false, showClose: false, selected: index % 2 == 0, isDefault: true })
       }
       length = Math.round(Math.random() * 5) + 5
       for (let index = 0; index < length; index++) {
-        this.tags.customer.push({ text: '职业规划' + index, selected: false, showClose: true, isDefault: false })
+        this.tags.customer.push({ text: '职业规划' + index, selected: false, showClose: true, selected: index % 2 == 0, isDefault: false })
       }
     },
     showDialog() {

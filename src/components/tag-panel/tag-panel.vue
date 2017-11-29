@@ -2,12 +2,12 @@
   <div :class="prefixCls">
     <div>
       <template v-for="(item,index) in tags.default">
-        <Tag v-on:remove="removeTag" :textIsHtml="textIsHtml" :enabledLongtap="enabledLongtap" :selected="selected" :maxLength="maxLength" :tag="getTag(index,'default')" v-on:click="clickHandler" :key="index" :text="item.text" :showClose="item.showClose" :isDefault="item.isDefault"></Tag>
+        <Tag v-on:remove="removeTag" :textIsHtml="textIsHtml" :enabledLongtap="enabledLongtap" :selected="item.selected" :maxLength="maxLength" :tag="getTag(index,'default')" v-on:click="clickHandler" :key="index" :text="item.text" :showClose="item.showClose" :isDefault="item.isDefault"></Tag>
       </template>
     </div>
     <div>
       <template v-for="(item,index) in tags.customer">
-        <Tag v-on:remove="removeTag" :textIsHtml="textIsHtml" :enabledLongtap="enabledLongtap" :selected="selected" :maxLength="maxLength" :tag="getTag(index,'customer')" v-on:click="clickHandler" :key="index" :text="item.text" :showClose="item.showClose" :isDefault="item.isDefault"></Tag>
+        <Tag v-on:remove="removeTag" :textIsHtml="textIsHtml" :enabledLongtap="enabledLongtap" :selected="item.selected" :maxLength="maxLength" :tag="getTag(index,'customer')" v-on:click="clickHandler" :key="index" :text="item.text" :showClose="item.showClose" :isDefault="item.isDefault"></Tag>
       </template>
     </div>
     <div v-if="showAdd" @click="addTagHandler" class="weui-uploader__input-box"></div>
@@ -40,10 +40,6 @@ export default {
       default: ''
     },
     enabledLongtap: {
-      type: Boolean,
-      default: false
-    },
-    selected: {
       type: Boolean,
       default: false
     },
