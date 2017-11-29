@@ -88,6 +88,8 @@ Vue.use(ArcWeUI)
 - [cube-ui](https://github.com/didi/cube-ui)
 
 ## 更新内容
+###1.0.24
+- tag,tagpanel,dialog-panel组件增加text是否解析为html属性（textIsHtml）以及maxlength,selected,enabledLongtap属性
 ###1.0.23
 - tag组件添加属性maxLength,控制超出文本显示...，默认是10个汉字
 ###1.0.22

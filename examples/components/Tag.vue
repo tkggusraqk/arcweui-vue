@@ -10,6 +10,10 @@
     <br/>
     <br/>
     <Tag text="长按显示删除超出10个汉字" @click="tagClick" :enabledLongtap="true" v-on:remove="removeTag"></Tag>
+    <Tag text="不解析html<div></div>" @click="tagClick" :enabledLongtap="true" v-on:remove="removeTag"></Tag>
+    <br/>
+    <br/>
+    <Tag text="解析html<span style='color:red'>这是span</span>" :textIsHtml="true"></Tag>
     <br/>
     <br/>
     <div v-text="selectTags.toString()"></div>

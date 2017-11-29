@@ -2,7 +2,12 @@
   <a href="javascript:;" :id="id" v-touch:long="longtap" @click="clickHandler" class="weui-btn" :class="[prefixCls,classNames,dynamicClass]">
     <i class="weui-loading" v-show="dynamicClass.includes('weui-btn_loading')"></i>
     <span>
-      <p :class="{'text-overflow':maxLength>0 && text.length>maxLength}" v-html="text"></p>
+      <template v-if="textIsHtml">
+        <p :class="{'text-overflow':maxLength>0 && text.length>maxLength}" v-html="text"></p>
+      </template>
+      <template v-else>
+        <p :class="{'text-overflow':maxLength>0 && text.length>maxLength}" v-text="text"></p>
+      </template>
     </span>
     <slot></slot>
   </a>
@@ -29,6 +34,10 @@ export default {
     maxLength: {
       type: Number,
       default: 0
+    },
+    textIsHtml: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

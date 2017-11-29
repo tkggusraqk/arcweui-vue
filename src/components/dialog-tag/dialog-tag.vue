@@ -1,7 +1,7 @@
 <template>
   <div :class="prefixCls">
     <Dialog title="标签" v-model="showDialog" @click="dialogResult" type="confirm">
-      <TagPanel :tags="tags" v-on:remove-tag="removeTag" v-on:add-tag="addTag" v-model="addTagText" v-on:click-tag="clickHandler"></TagPanel>
+      <TagPanel :tags="tags" v-on:remove-tag="removeTag" :enabledLongtap="enabledLongtap" :selected="selected" :maxLength="maxLength" :textIsHtml="textIsHtml" v-on:add-tag="addTag" v-model="addTagText" v-on:click-tag="clickHandler"></TagPanel>
     </Dialog>
   </div>
 </template>
@@ -25,6 +25,22 @@ export default {
     newTag: {
       type: String,
       default: ''
+    },
+    enabledLongtap: {
+      type: Boolean,
+      default: false
+    },
+    selected: {
+      type: Boolean,
+      default: false
+    },
+    maxLength: {
+      type: Number,
+      default: 10
+    },
+    textIsHtml: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
