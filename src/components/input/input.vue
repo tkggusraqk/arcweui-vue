@@ -55,10 +55,10 @@ export default {
   watch: {
     value(val) {
       this.text = val
-			this.$emit('input', val)
     },
     text(val) {
       this.inputCount = val.length
+      this.$emit('input', this.text)
     }
   },
   data() {
